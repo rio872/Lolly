@@ -44,3 +44,9 @@ Lolly
 ├── about.html
 ├── contact.html
 └── README.md
+
+## Technologies used 
+
+-HTML 
+-CSS
+-JavaScript 
