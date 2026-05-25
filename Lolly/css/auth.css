@@ -40,8 +40,8 @@ a {
 .left-section {
   position: relative;
   width: 57%;
-  min-width: 750px;
-  height: 100vh;
+  min-width: 720px;
+  height: 101vh;
   background: var(--olive);
   padding: 18px 50px;
   clip-path: ellipse(92% 115% at 0% 50%);
