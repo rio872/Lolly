@@ -28,7 +28,9 @@ The website is designed to showcase jewellery products such as rings, necklaces,
 - VS Code Live Server
 
 ## Folder Structure
+## Project Description
 
+The website includes pages for homepage, catalogue, collections, login, signup, and product categories.
 ```txt
 Lolly
 ├── css
