@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lolly – Log In</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&amp;family=Jost:wght@300;400;500&amp;family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet"/>
+<link href="css/auth.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="page">
+<div class="left-section">
+<a href="index.html">
+<div class="logo">Lolly</div>
+</a>
+<div class="form-area">
+<div class="tabs">
+<a class="tab" href="signup.html">Sign up</a>
+<a class="tab active" href="login.html">Log in</a>
+</div>
+<h1 class="form-title">Log In to your Account</h1>
+<p class="form-subtitle">Welcome back! Select method to Log In</p>
+<div class="social-row">
+<button class="social-btn">
+<svg height="20" viewbox="0 0 48 48" width="20">
+<path d="M24 9.5c3.5 0 6.6 1.2 9 3.2l6.7-6.7C35.8 2.5 30.2 0 24 0 14.7 0 6.7 5.4 2.7 13.3l7.8 6.1C12.5 13.2 17.8 9.5 24 9.5z" fill="#EA4335"></path>
+<path d="M46.6 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h12.7c-.5 2.9-2.2 5.4-4.7 7l7.3 5.7c4.3-4 6.3-9.9 7.3-16.7z" fill="#4285F4"></path>
+<path d="M10.5 28.6A14.6 14.6 0 0 1 9.5 24c0-1.6.3-3.1.8-4.6l-7.8-6.1A23.9 23.9 0 0 0 0 24c0 3.9.9 7.5 2.6 10.7l7.9-6.1z" fill="#FBBC05"></path>
+<path d="M24 48c6.2 0 11.4-2 15.2-5.5l-7.3-5.7c-2 1.4-4.6 2.2-7.9 2.2-6.2 0-11.4-3.7-13.4-9l-7.9 6.1C6.7 42.6 14.7 48 24 48z" fill="#34A853"></path>
+</svg>
+            Google
+          </button>
+<button class="social-btn">
+<svg height="20" viewbox="0 0 48 48" width="20">
+<path d="M48 24C48 10.7 37.3 0 24 0S0 10.7 0 24c0 12 8.8 21.9 20.3 23.7V30.9h-6.1V24h6.1v-5.3c0-6 3.6-9.4 9.1-9.4 2.6 0 5.4.5 5.4.5v5.9h-3c-3 0-3.9 1.9-3.9 3.8V24h6.6l-1.1 6.9h-5.6v16.8C39.2 45.9 48 36 48 24z" fill="#1877F2"></path>
+</svg>
+            Facebook
+          </button>
+</div>
+<div class="divider"><span>or continue with email</span></div>
+<div class="input-wrap">
+<span class="input-icon">
+<svg fill="none" height="16" stroke="#aaa" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="16"><path d="M4 6h16v12H4z"></path><path d="M4 7l8 6 8-6"></path></svg>
+</span>
+<input placeholder="Email" type="email"/>
+</div>
+<div class="input-wrap">
+<span class="input-icon">
+<svg fill="none" height="16" stroke="#aaa" stroke-width="1.8" viewbox="0 0 24 24" width="16"><rect height="11" rx="2" width="18" x="3" y="11"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+</span>
+<input id="pw" placeholder="Password" type="password"/>
+<span class="eye-toggle" onclick="togglePw()">
+<svg fill="none" height="16" stroke="#bbb" stroke-width="1.8" viewbox="0 0 24 24" width="16"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8S1 12 1 12z"></path><circle cx="12" cy="12" r="3"></circle><line stroke="#bbb" x1="3" x2="21" y1="3" y2="21"></line></svg>
+</span>
+</div>
+<div class="row-check">
+<label class="check-label">
+<input checked="" type="checkbox"/>
+<span class="custom-check"></span>
+            Remember me
+          </label>
+<span class="forgot">Forget Password?</span>
+</div>
+<button class="submit-btn">Log In</button>
+</div>
+</div>
+<!-- Right photo collage -->
+<div class="right-section">
+<div class="photos-collage">
+<div class="photo photo-1">
+<img alt="Jewelry Model" src="images/L_S1.jpg"/>
+</div>
+<div class="photo photo-2">
+<img alt="Jewelry Model" src="images/L_S2.jpg"/>
+</div>
+<div class="photo photo-3">
+<img alt="Jewelry Model" src="images/L_S3.jpg"/>
+</div>
+</div>
+</div>
+</div>
+<script src="js/auth.js"></script>
+</body>
+</html>

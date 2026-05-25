@@ -1,0 +1,391 @@
+
+:root {
+  --olive:      #96936f;
+  --olive-dark: #6b7c2e;
+  --cream:      #fbf7e9;
+  --white:      #ffffff;
+  --red:        #a40000;
+  --text-dark:  #333333;
+  --text-muted: #9da3ad;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Jost", sans-serif;
+  background: var(--cream);
+}
+
+a {
+  text-decoration: none;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: var(--cream);
+}
+
+/* Left form panel */
+.left-section {
+  position: relative;
+  width: 57%;
+  min-width: 750px;
+  height: 100vh;
+  background: var(--olive);
+  padding: 18px 50px;
+  clip-path: ellipse(92% 115% at 0% 50%);
+  z-index: 3;
+}
+
+.left-section a {
+  text-decoration: none;
+}
+
+/* Right image panel */
+.right-section {
+  flex: 1;
+  height: 100vh;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* ====================================================
+   4. COMPONENTS
+   ==================================================== */
+
+/* ---------- Logo ---------- */
+.logo {
+  font-family: "EB Garamond", serif;
+  font-size: 64px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--red);
+  letter-spacing: 0.04em;
+  min-width: 100px;
+  padding-left: 60px;
+}
+
+
+/* ---------- Form Area ---------- */
+.form-area {
+  width: 470px;
+  margin-left: 150px;
+  margin-top: 78px;
+}
+
+
+/* ---------- Tabs ---------- */
+.tabs {
+  display: flex;
+  gap: 38px;
+}
+
+.tab {
+  font-size: 24px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.05em;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--red);
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
+}
+
+.tab:hover,
+.tab.active {
+  color: var(--white);
+}
+
+.tab:hover::after,
+.tab.active::after {
+  width: 100%;
+}
+
+
+/* ---------- Form Text ---------- */
+.form-title {
+  color: var(--white);
+  max-width: fit-content;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.form-subtitle {
+  color: var(--white);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+
+/* ---------- Social Buttons ---------- */
+.social-row {
+  display: flex;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.social-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #222;
+  cursor: pointer;
+  font-family: "Jost", sans-serif;
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+
+.social-btn:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  transform: translateY(-1px);
+}
+
+.social-btn svg {
+  flex-shrink: 0;
+}
+
+
+/* ---------- Divider ---------- */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 42px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 2px;
+  background: var(--white);
+  flex: 1;
+}
+
+.divider span {
+  color: var(--white);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+
+/* ---------- Form Inputs ---------- */
+.input-wrap {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.input-wrap input {
+  width: 100%;
+  height: 46px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: var(--white);
+  padding: 0 45px;
+  font-size: 15px;
+  color: var(--text-dark);
+}
+
+.input-wrap input::placeholder {
+  color: var(--text-muted);
+}
+
+.input-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+}
+
+.eye-toggle {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  cursor: pointer;
+}
+
+
+/* ---------- Remember Row ---------- */
+.row-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.check-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.check-label input[type="checkbox"] {
+  display: none;
+}
+
+.custom-check {
+  width: 17px;
+  height: 17px;
+  background: var(--olive-dark);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.check-label input:checked + .custom-check {
+  background: var(--olive-dark);
+  border-color: #8fa040;
+}
+
+.check-label input:checked + .custom-check::after {
+  content: "";
+  width: 9px;
+  height: 5px;
+  border-left: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+  transform: rotate(-45deg) translateY(-1px);
+}
+
+.forgot {
+  font-size: 13px;
+  color: var(--white);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+/* ---------- Submit Button ---------- */
+.submit-btn {
+  width: 100%;
+  height: 46px;
+  background: transparent;
+  border: 1.5px solid var(--white);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: "Jost", sans-serif;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.submit-btn:hover {
+  background: var(--white);
+  color: var(--olive);
+  transform: translateY(-1px);
+}
+
+
+/* ---------- Photo Collage ---------- */
+.photos-collage {
+  position: absolute;
+  width: 800px;
+  height: 720px;
+  top: 32px;
+  right: 20px;
+}
+
+.photo {
+  position: absolute;
+  background: var(--white);
+  padding: 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-1 {
+  width: 420px;
+  height: 475px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.photo-1 img {
+  object-position: top 30%;
+}
+
+.photo-2 {
+  width: 420px;
+  height: 525px;
+  top: 125px;
+  right: 0;
+  z-index: 3;
+}
+
+.photo-2 img {
+  object-position: top;
+}
+
+.photo-3 {
+  width: 420px;
+  height: 475px;
+  top: 380px;
+  left: 62px;
+  z-index: 2;
+}
+
+.photo-3 img {
+  object-position: top;
+}
+
+.carousel-dot {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: var(--white);
+  border-radius: 50%;
+  left: -22px;
+  top: 285px;
+  z-index: 10;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "lolly-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx live-server --port=5500 --entry-file=index.html",
+    "catalogue": "npx live-server --port=5500 --entry-file=catalogue.html"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
